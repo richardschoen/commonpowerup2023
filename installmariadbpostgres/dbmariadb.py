@@ -256,48 +256,6 @@ class DbMariaDb():
         except Exception as e:
             print(e)
             return None
-
-    def insert_dwservice(self,FTWON,FTYEAR,FTMON,FTCUS,FTCON,FTVND,FTITM,FTSER,FTCNM,FTBDET,FTBSAN,FTBDRY,FTBJUG,FTDETOH,FTSANOH,FTDRYOH,FTJUGOH,FTJUGMS,FTARRIVE,FTDEPART,FTTEMP,FTDETML,FTSANML,FTDRYML,FTCCR,FTPCR,FTCYC,FTRACK,FTOCC,FTOCHG,FTOAMT,FTMSJ,FTMCHG,FTRENT,FTPNET,FTONET,FTNET,FTRATE,FTTAX,FTGRS,FFPDUE,FFTDUE,FTDETG,FTSANG,FTDRYG,FTMLG,FTSDET,FTSSAN,FTSDRY,FTODET,FTOSAN,FTODRY,FTCDET,FTCSAN,FTCDRY,FTCNET,FTCCMT,FTREQ,FTPART,FTPMM,FTPAY,FTPCK,FTPNM,FTSIG,FTTECH,FTTYP,FFSDET,FFSSAN,FFSDRY,FTMTP,FTDETU,FTSANU,FTDRYU,FTDETD,FTSAND,FTDRYD,FTJUGP,FTJUGD,FTEXTRRCK,FTEXTPRC,FTRM,FTCCOF,FTEXTAMT,FTRNTQTY,FTMRCHSB,FTPRD,FTDAT,FTWPPM,FTSTS):
-        #----------------------------------------------------------
-        # Function: insert_dwservice
-        # Desc: Insert new record into Work Order 
-        # :param self: Pointer to object instance. 
-        # :param field names: Each individual field name needed
-        # :param library: IBMi library. Default=qiws
-        # :return: Result value from query
-        #----------------------------------------------------------
-        try:
-           # Create the SQL statement 
-           sql= "insert into pythonapps.dwservice (FTWON,FTYEAR,FTMON,FTCUS,FTCON,FTVND,FTITM,FTSER,FTCNM,FTBDET,FTBSAN,FTBDRY,FTBJUG,FTDETOH,FTSANOH,FTDRYOH,FTJUGOH,FTJUGMS,FTARRIVE,FTDEPART,FTTEMP,FTDETML,FTSANML,FTDRYML,FTCCR,FTPCR,FTCYC,FTRACK,FTOCC,FTOCHG,FTOAMT,FTMSJ,FTMCHG,FTRENT,FTPNET,FTONET,FTNET,FTRATE,FTTAX,FTGRS,FFPDUE,FFTDUE,FTDETG,FTSANG,FTDRYG,FTMLG,FTSDET,FTSSAN,FTSDRY,FTODET,FTOSAN,FTODRY,FTCDET,FTCSAN,FTCDRY,FTCNET,FTCCMT,FTREQ,FTPART,FTPMM,FTPAY,FTPCK,FTPNM,FTSIG,FTTECH,FTTYP,FFSDET,FFSSAN,FFSDRY,FTMTP,FTDETU,FTSANU,FTDRYU,FTDETD,FTSAND,FTDRYD,FTJUGP,FTJUGD,FTEXTRRCK,FTEXTPRC,FTRM,FTCCOF,FTEXTAMT,FTRNTQTY,FTMRCHSB,FTPRD,FTDAT,FTWPPM,FTSTS) VALUES(%s,%s,%s,'%s',%s,'%s','%s','%s','%s',%s,%s,%s,%s,%s,%s,%s,%s,%s,'%s','%s',%s,%s,%s,%s,'%s',%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,'%s','%s','%s',%s,%s,%s,'%s','%s','%s','%s',%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,'%s',%s,%s,%s,'%s','%s',%s,'%s')" % (FTWON,FTYEAR,FTMON,FTCUS,FTCON,FTVND,FTITM,FTSER,FTCNM,FTBDET,FTBSAN,FTBDRY,FTBJUG,FTDETOH,FTSANOH,FTDRYOH,FTJUGOH,FTJUGMS,FTARRIVE,FTDEPART,FTTEMP,FTDETML,FTSANML,FTDRYML,FTCCR,FTPCR,FTCYC,FTRACK,FTOCC,FTOCHG,FTOAMT,FTMSJ,FTMCHG,FTRENT,FTPNET,FTONET,FTNET,FTRATE,FTTAX,FTGRS,FFPDUE,FFTDUE,FTDETG,FTSANG,FTDRYG,FTMLG,FTSDET,FTSSAN,FTSDRY,FTODET,FTOSAN,FTODRY,FTCDET,FTCSAN,FTCDRY,FTCNET,FTCCMT,FTREQ,FTPART,FTPMM,FTPAY,FTPCK,FTPNM,FTSIG,FTTECH,FTTYP,FFSDET,FFSSAN,FFSDRY,FTMTP,FTDETU,FTSANU,FTDRYU,FTDETD,FTSAND,FTDRYD,FTJUGP,FTJUGD,FTEXTRRCK,FTEXTPRC,FTRM,FTCCOF,FTEXTAMT,FTRNTQTY,FTMRCHSB,FTPRD,FTDAT,FTWPPM,FTSTS)
-           # Insert the record
-           # Note: self parm not needed for execute when internal class function called
-           rtnexecute=self.execute(sql)
-           # Return result value
-           return rtnexecute
-        except Exception as e:
-            print(e)  
-            return -2 # return -2 on error 
-
-    def delete_dwservice(self,FTWON):
-        #----------------------------------------------------------
-        # Function: delete_dwservice
-        # Desc: Delete record from Work Order 
-        # :param self: Pointer to object instance. 
-        # :param field names: Each individual field name needed
-        # :param library: IBMi library. Default=qiws
-        # :return: Result value from query
-        #----------------------------------------------------------
-        try:
-           # Create the SQL statement 
-           sql= "insert into pythonapps.dwservice (FTWON,FTYEAR,FTMON,FTCUS,FTCON,FTVND,FTITM,FTSER,FTCNM,FTBDET,FTBSAN,FTBDRY,FTBJUG,FTDETOH,FTSANOH,FTDRYOH,FTJUGOH,FTJUGMS,FTARRIVE,FTDEPART,FTTEMP,FTDETML,FTSANML,FTDRYML,FTCCR,FTPCR,FTCYC,FTRACK,FTOCC,FTOCHG,FTOAMT,FTMSJ,FTMCHG,FTRENT,FTPNET,FTONET,FTNET,FTRATE,FTTAX,FTGRS,FFPDUE,FFTDUE,FTDETG,FTSANG,FTDRYG,FTMLG,FTSDET,FTSSAN,FTSDRY,FTODET,FTOSAN,FTODRY,FTCDET,FTCSAN,FTCDRY,FTCNET,FTCCMT,FTREQ,FTPART,FTPMM,FTPAY,FTPCK,FTPNM,FTSIG,FTTECH,FTTYP,FFSDET,FFSSAN,FFSDRY,FTMTP,FTDETU,FTSANU,FTDRYU,FTDETD,FTSAND,FTDRYD,FTJUGP,FTJUGD,FTEXTRRCK,FTEXTPRC,FTRM,FTCCOF,FTEXTAMT,FTRNTQTY,FTMRCHSB,FTPRD,FTDAT,FTWPPM,FTSTS) VALUES(%s,%s,%s,'%s',%s,'%s','%s','%s','%s',%s,%s,%s,%s,%s,%s,%s,%s,%s,'%s','%s',%s,%s,%s,%s,'%s',%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,'%s','%s','%s',%s,%s,%s,'%s','%s','%s','%s',%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,'%s',%s,%s,%s,'%s','%s',%s,'%s')" % (FTWON,FTYEAR,FTMON,FTCUS,FTCON,FTVND,FTITM,FTSER,FTCNM,FTBDET,FTBSAN,FTBDRY,FTBJUG,FTDETOH,FTSANOH,FTDRYOH,FTJUGOH,FTJUGMS,FTARRIVE,FTDEPART,FTTEMP,FTDETML,FTSANML,FTDRYML,FTCCR,FTPCR,FTCYC,FTRACK,FTOCC,FTOCHG,FTOAMT,FTMSJ,FTMCHG,FTRENT,FTPNET,FTONET,FTNET,FTRATE,FTTAX,FTGRS,FFPDUE,FFTDUE,FTDETG,FTSANG,FTDRYG,FTMLG,FTSDET,FTSSAN,FTSDRY,FTODET,FTOSAN,FTODRY,FTCDET,FTCSAN,FTCDRY,FTCNET,FTCCMT,FTREQ,FTPART,FTPMM,FTPAY,FTPCK,FTPNM,FTSIG,FTTECH,FTTYP,FFSDET,FFSSAN,FFSDRY,FTMTP,FTDETU,FTSANU,FTDRYU,FTDETD,FTSAND,FTDRYD,FTJUGP,FTJUGD,FTEXTRRCK,FTEXTPRC,FTRM,FTCCOF,FTEXTAMT,FTRNTQTY,FTMRCHSB,FTPRD,FTDAT,FTWPPM,FTSTS)
-           # Insert the record
-           # Note: self parm not needed for execute when internal class function called
-           rtnexecute=self.execute(sql)
-           # Return result value
-           return rtnexecute
-        except Exception as e:
-            print(e)  
-            return -2 # return -2 on error 
      
     def getnewguid(self):
         #----------------------------------------------------------
