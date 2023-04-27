@@ -2,7 +2,9 @@
       //--------------------------------------------------------------------
       // Desc: Query MariaDB QCUSTCDT and Process All Rows
       // https://www.mcpressonline.com/programming/rpg/qualified-data-structures
-      // AppServer4RPG Sample that uses MariaDB connection named DBMYSQL
+      // AppServer4RPG Sample that uses MariaDB connection named DBMYSQL.
+      // Note:
+      // Make sure QIWS is in your library list when compiling this program.
       //--------------------------------------------------------------------
 
       // Declare external data structure
