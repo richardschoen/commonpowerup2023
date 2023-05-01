@@ -4,6 +4,15 @@ This directory will contain remote database access samples.
 
 # IBM i System Prerequisites
 
+## Create Common Samples Library
+From a 5250 screen
+```
+CRtLIB COMMON2023
+
+CRTSRCPF FILE(COMMON2023/SOURCE)       
+         RCDLEN(120)              
+```
+
 ## Create IFS directories
 ```
 mkdir /common2023.  
