@@ -1,4 +1,4 @@
-# Remote Database Access Samples
+# Three RPG Remote Database Access Samples
 
 This directory will contain remote database access samples.
 
@@ -43,12 +43,7 @@ yum install mariadb-server
 ### Install MySql Python Client
 pip3 install PyMySql
 
-# AppServer4RPG Samples for Remote Database Access
-
-## ARDSAMP01R - Read QCUSTCDT table from MariaDB using embedded RPG SQL
-This sample uses the AppServer4RPG to connect to a remote MariaDB database and query the QCUSTCDT table.
-
-# JDBCR4 Samples for Remote Database Access
+# Method 1 - JDBCR4 Samples for Remote Database Access
 
 ## JDBC01C/JDBC01R - Use JDBC and Java from RPG to read data from MariaDB version of QCUSTCDT table.
 This sample reads data from MariaDB table QCUSTCDT and displays it.    
@@ -60,7 +55,12 @@ This sample writes a record via INSERT to MariaDB table QCUSTCDT.
 
 The QCUSTCDT table must exist. Use QIWS/QCUSTCDT as a model for the MariaDB table.
 
-# Python and RPG Command Line Database Access Samples
+# Method 2 - AppServer4RPG Samples for Remote Database Access
+
+## ARDSAMP01R - Read QCUSTCDT table from MariaDB using embedded RPG SQL
+This sample uses the AppServer4RPG to connect to a remote MariaDB database and query the QCUSTCDT table.
+
+# Method 3 - Python and RPG Command Line Database Access Samples
 
 ## JSONCUST1R - Run Query with MARIADBCLI and Consume JSON Results
 This sample uses a Python command line interface embedded within a CL command to call Python code to read data via SQL from a MariaDB database to JSON. The data gets written to an IFS file in JSON format. Then the JSON is consumed using the YAJL JSON functions.
