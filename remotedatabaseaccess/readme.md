@@ -5,6 +5,9 @@ This directory will contain remote database access samples.
 # IBM i System Prerequisites
 
 ## IBM i Libraries Needed
+Make sure each of these libraries is installed a compiled on your IBM i system.    
+
+They should also be in the library list. 
 
 QShell on i - QSHEXEC  
 https://github.com/richardschoen/qshoni
