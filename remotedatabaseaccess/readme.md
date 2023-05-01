@@ -7,7 +7,7 @@ This directory will contain remote database access samples.
 ## Create Common Samples Library
 From a 5250 screen
 ```
-CRtLIB COMMON2023
+CRTLIB COMMON2023
 
 CRTSRCPF FILE(COMMON2023/SOURCE)       
          RCDLEN(120)              
