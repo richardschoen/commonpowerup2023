@@ -4,6 +4,13 @@ This directory will contain remote database access samples.
 
 # IBM i System Prerequisites
 
+## Create IFS directories
+```
+mkdir /common2023.  
+mkdir /common2023/dbcli.  
+mkdir /common2023/jdbc. 
+```
+
 ## IBM i Libraries Needed
 Make sure each of these libraries is installed a compiled on your IBM i system.    
 
@@ -18,15 +25,20 @@ https://scottklement.com/jdbc
 Scott Klement - YAJL JSON.  
 https://scottklement.com/yajl
 
-## Open Source Package Manegement Packages needed (yum installs)
+## Open Source Package Manegement Packages needed 
+Open source packages can be installed IBM Access Client Solutions - Open Source Package Management or via yum command line install commands.
 
 ### Python 3 packages
-python3   
-python39   
+```
+yum install python3   
+yum install python39   
+```
 
 ### MariaDB server
-mariadb.  
-mariadb-server    
+```
+yum install mariadb.  
+yum install mariadb-server    
+```
 
 ### Install MySql Python Client
 pip3 install PyMySql
